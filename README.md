@@ -80,10 +80,11 @@ For support in using this software, submit an
 
 # AlgorMeter
 DADC algorithm is based on AlgorMeter package.  
-AlgoMeter is a Python framework for developing, testing, and comparing optimization algorithms. It provides a standard library of DC and convex functions for testing algorithms, as well as integrated performance profiles graphics and other tools.
+Algormeter is a Python framework for developing, testing, and measuring optimizers algorithms. It provides a standard library of DC and convex functions for testing algorithms. It can be used to run experiments with different algorithms and problems, and produce comparative measures and performance profiles graph. Algormeter can also optimize the number of function calls, so that multiple calls at the same point are counted only once.  It can perform algorithm parameter tuning.  
+Description is at https://github.com/xedla/algormeter/blob/master/README.md   
 It is available as pypi package
 ```
 pip install algormeter
 ```
 
-Development repository is at https://github.com/xedla/algormeter
+Development repository is at https://github.com/xedla/algormeter  

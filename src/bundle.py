@@ -1,3 +1,6 @@
+'''
+    Bundle management module
+'''
 import numpy as np
 import warnings
 from enum import Enum, auto

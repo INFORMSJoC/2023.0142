@@ -31,12 +31,11 @@ problems = [
 
 iterations = 3000
 algorithms = [da.DADC]
-
 ts = datetime.datetime.now()
-df, pv= algorMeter(algorithms = algorithms,  iterations = iterations, 
-                     problems = problems,
-                     # trace=True, 
-                     )
+
+# use algometer framework. 
+# see https://github.com/xedla/algormeter/blob/master/README.md   
+df, pv= algorMeter(algorithms = algorithms,  iterations = iterations, problems = problems )
 
 pvf1 = np.round(pd.pivot_table(df, values=['f1'],index=['Algorithm',],columns=['Status'],aggfunc=['sum'],margins=True),2) 
 print('\n', df)
