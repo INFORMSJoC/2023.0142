@@ -25,7 +25,7 @@ https://doi.org/10.1287/ijoc.2023.0142
 
 https://doi.org/10.1287/ijoc.2023.0142.cd
 
-Below is the BibTex for citing this snapshot of the respoitory.
+Below is the BibTex for citing this snapshot of the repository.
 
 ```
 @article{CacheTest,
@@ -60,7 +60,7 @@ Execute the command line:
 ```
 python3 ./scripts/runme.py
 ```
-csv file experiment results will be available in 'results' folder.
+csv file experiment results will be available in 'csv' folder.
 ## Results
 In image below is run result on Apple MacBook Pro 14 mid 2021 with processor Apple silicon M1 Pro.
 Python 3.11.5 interpreter.
