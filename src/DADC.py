@@ -6,7 +6,7 @@ import numpy as np
 from enum import Enum, auto
 from numpy.linalg import norm
 from algormeter.tools import counter, dbx
-from bundle import Bundle
+from bundle import Bundle # bundle management module 
 
 
 Par_GAMMAMAX = 1.5 # 1/gamma Max proximity  
@@ -16,9 +16,10 @@ Par_MU = .1  # Descent ratio
 Par_ETA = 1.E-4 #   Stopping tolerance 
 Par_ATOL = 1.E-3 # tollerance isclose e allclose 
 RHO = 1. 
-Par_AGG_GRA = False # enable gradiente aggregato 
+Par_AGG_GRA = False # enable aggregate gradient 
 
-
+# use algometer framework. 
+# Description is at https://github.com/xedla/algormeter/blob/master/README.md   
 def DADC(p,**kwargs):
 
     class BEK(Enum): # Bundle Element Kind
