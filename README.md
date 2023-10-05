@@ -1,106 +1,89 @@
 [![INFORMS Journal on Computing Logo](https://INFORMSJoC.github.io/logos/INFORMS_Journal_on_Computing_Header.jpg)](https://pubsonline.informs.org/journal/ijoc)
 
-# CacheTest
+# [DADC: The descent-ascent algorithm for DC programming](https://doi.org/10.1287/ijoc.2023.0142)
+
 
 This archive is distributed in association with the [INFORMS Journal on
 Computing](https://pubsonline.informs.org/journal/ijoc) under the [MIT License](LICENSE).
 
-The software and data in this repository are a snapshot of the software and data
+The software and data in this repository are a snapshot of the software
 that were used in the research reported on in the paper 
-[This is a Template](https://doi.org/10.1287/ijoc.2019.0000) by T. Ralphs. 
+[DADC](https://doi.org/10.1287/ijoc.2023.0142). 
 The snapshot is based on 
-[this SHA](https://github.com/tkralphs/JoCTemplate/commit/f7f30c63adbcb0811e5a133e1def696b74f3ba15) 
+[this SHA](https://github.com/xedla/DADC/commit/9807f88004f7b74b3e989015ad6b9b612563e49a)
 in the development repository. 
 
 **Important: This code is being developed on an on-going basis at 
-https://github.com/tkralphs/JoCTemplate. Please go there if you would like to
+https://github.com/xedla/DADC. Please go there if you would like to
 get a more recent version or would like support**
 
 ## Cite
 
 To cite the contents of this repository, please cite both the paper and this repo, using their respective DOIs.
 
-https://doi.org/10.1287/ijoc.2019.0000
+https://doi.org/10.1287/ijoc.2023.0142
 
-https://doi.org/10.1287/ijoc.2019.0000.cd
+https://doi.org/10.1287/ijoc.2023.0142.cd
 
 Below is the BibTex for citing this snapshot of the respoitory.
 
 ```
 @article{CacheTest,
-  author =        {T. Ralphs},
+  author =        {Pietro D’Alessandro, Manlio Gaudioso, Giovanni Giallombardo, Giovanna Miglionico},
   publisher =     {INFORMS Journal on Computing},
-  title =         {{CacheTest}},
-  year =          {2020},
-  doi =           {10.1287/ijoc.2019.0000.cd},
-  url =           {https://github.com/INFORMSJoC/2019.0000},
+  title =         {{DADC: he descent-ascent algorithm for DC programming}},
+  year =          {2023},
+  doi =           {10.1287/ijoc.2023.0142.cd},
+  url =           {https://doi.org/10.1287/ijoc.2023.0142},
 }  
 ```
 
 ## Description
 
-The goal of this software is to demonstrate the effect of cache optimization.
+This repository contains the code to run the experiments present in "The descent-ascent algorithm for DC programming", a bundle method for the unconstrained minimization of nonsmooth difference-of-convex functions. 
 
-## Building
+## Install
+It is needed python 3.11 or above.
 
-In Linux, to build the version that multiplies all elements of a vector by a
-constant (used to obtain the results in [Figure 1](results/mult-test.png) in the
-paper), stepping K elements at a time, execute the following commands.
-
-```
-make mult
-```
-
-Alternatively, to build the version that sums the elements of a vector (used
-to obtain the results [Figure 2](results/sum-test.png) in the paper), stepping K
-elements at a time, do the following.
+Clone or download repository and run shell command as follow:
 
 ```
-make clean
-make sum
+sh ./scripts/install.sh
 ```
 
-Be sure to make clean before building a different version of the code.
+This script install specific packages versions in a python virtualenv.
 
+## Run experiment
+
+Execute the command line:
+
+```
+python3 ./scripts/runme.py
+```
+csv file experiment results will be available in 'results' folder.
 ## Results
+In image below is run result on Apple MacBook Pro 14 mid 2021 with processor Apple silicon M1 Pro.
+Python 3.11.5 interpreter.
 
-Figure 1 in the paper shows the results of the multiplication test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
+<img src="results/dadc.png" alt="DACD result" />
 
-![Figure 1](results/mult-test.png)
-
-Figure 2 in the paper shows the results of the sum test with different
-values of K using `gcc` 7.5 on an Ubuntu Linux box.
-
-![Figure 1](results/sum-test.png)
-
-## Replicating
-
-To replicate the results in [Figure 1](results/mult-test), do either
-
-```
-make mult-test
-```
-or
-```
-python test.py mult
-```
-To replicate the results in [Figure 2](results/sum-test), do either
-
-```
-make sum-test
-```
-or
-```
-python test.py sum
-```
 
 ## Ongoing Development
 
 This code is being developed on an on-going basis at the author's
-[Github site](https://github.com/tkralphs/JoCTemplate).
+[Github site](https://github.com/xedla/DADC).
 
 ## Support
 
 For support in using this software, submit an
-[issue](https://github.com/tkralphs/JoCTemplate/issues/new).
+[issue](https://github.com/xedla/DADC/issues/new).
+
+# AlgorMeter
+DADC algorithm is based on AlgorMeter package.  
+AlgoMeter is a Python framework for developing, testing, and comparing optimization algorithms. It provides a standard library of DC and convex functions for testing algorithms, as well as integrated performance profiles graphics and other tools.
+It is available as pypi package
+```
+pip install algormeter
+```
+
+Development repository is at https://github.com/xedla/algormeter
